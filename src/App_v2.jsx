@@ -1,11 +1,10 @@
-import Counter from "./Counter"
-
+import ProfilePicture from "./ProfilePicture"
 
 function App() {
 
   return(
     <>
-      <Counter/>
+    <ProfilePicture/>
     </>
   )
 }
