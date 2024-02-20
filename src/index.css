@@ -1,0 +1,110 @@
+body{
+  background-color: hsl(0, 0%, 96%);
+}
+
+.card{
+  /* border:  1px solid hsl(0, 0%, 95%); */
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px hsl(0 0% 0% / .1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.card .card-image{
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-block-end: 10px;
+}
+
+.card .card-title{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: hsl(0, 0%, 20%);
+}
+
+.card .card-text{
+  font-family: Arial, sans-serif;
+  color: hsl(0, 0%, 30%);
+
+}
+
+.student{
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px hsl(0 0% 0% / .1);
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.student p{
+  margin: 0;
+}
+
+.welcome-msg{
+  font-family: Arial,sans-serif;
+  background-color: hsl(113, 88%, 38%);
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.login-prompt{
+  font-family: Arial,sans-serif;
+  background-color: hsl(7, 88%, 38%);
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.list{
+  display: inline-block;
+  width: 100%;
+  max-width: 230px;
+  font-family: Arial,sans-serif;
+  background-color: #fff; 
+  padding-block-start: 1.6rem;
+  padding-block-end: .6rem;
+  padding-inline: 1.6rem;
+  margin: 1rem;  
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px hsl(0, 0%, 90%);
+}
+
+.list-category{
+  font-size: 1.6em;
+  font-weight:300;
+  color: hsl(0, 0%, 20%);
+  margin: 0;
+  color: rgb(123, 190, 196);
+}
+
+.list-items{
+  padding: 0;
+}
+
+.list-items li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+  list-style: none;
+  color: hsl(0, 0%, 25%);
+  margin: 0;
+  padding-inline: .8rem;
+  padding-block: .3rem;
+}
+.list-items li:hover{
+  color: rgb(123, 190, 196);
+  border-radius: 5px;
+  cursor: pointer;
+}
