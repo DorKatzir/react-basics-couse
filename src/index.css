@@ -193,3 +193,50 @@ p span{
 p{
   font-weight:600;
 }
+
+
+/* Color Picker */
+.color-picker-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-radius: 10px; */
+}
+.color-picker-container h1{
+  color: whitesmoke;
+  margin-block-end: 30px;
+}
+.color-display{
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  box-shadow: var(--shadow-card);
+  transition: .25s ease;
+}
+.color-display p{
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+}
+.color-display span.color{
+  font-size: 1.8rem;
+  color: white;
+}
+
+.color-picker-container label{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type='color']{
+  width: 75px;
+  height: 50px;
+}
+
