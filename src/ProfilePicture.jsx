@@ -1,7 +1,6 @@
+import imageUrl from './assets/200x200_dror.png'
 
 export default function ProfilePicture() {
-
-    const imageUrl = './src/assets/200x200_dror.png'
 
     const handleClick = (e)=> e.target.style.borderRadius = '50%'
 
