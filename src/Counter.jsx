@@ -18,10 +18,13 @@ export default function Counter() {
     return (
 		<>
 			<div className='counter-container'>
-				<p className='count-display'>{count}</p>
-				<button onClick={decrement}>-</button>
-				<button disabled={ count === 0 ? true : false} onClick={reset}>Reset</button>
-				<button onClick={increment}>+</button>
+                <h2>Counter</h2>
+				<p className='counter-display'>{count}</p>
+                <div className='counter-btns'>
+                    <button onClick={decrement}>-</button>
+                    <button disabled={ count === 0 ? true : false} onClick={reset}>Reset</button>
+                    <button onClick={increment}>+</button>
+                </div>
 			</div>
 		</>
 	)
