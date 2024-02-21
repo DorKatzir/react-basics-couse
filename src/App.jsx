@@ -1,10 +1,11 @@
-import MyComponent from './MyComponent'
+import Cars from "./Cars"
+
 
 function App() {
 
   return(
     <>
-      <MyComponent/>
+      <Cars/>
     </>
   )
 }
