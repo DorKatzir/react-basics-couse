@@ -19,7 +19,7 @@ export default function MyComponent() {
 	}
 
     const resetAge = () => {
-		setAge(age => age == 0)
+		setAge(0)
 	}
 
     const toggleEmployedStatus = ()=>{
