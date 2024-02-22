@@ -288,20 +288,32 @@ input[type='color']{
   font-weight: normal;
 }
 
-
+/*/////////  TO DO LIST  //////// */
+.task-btns{
+  display: flex;
+  gap:5px;
+  align-items: center;
+}
 .move-button{
   background-color: hsla(187, 100%, 42%, 0.4);
+  padding: 5px;
+  margin: 0;
 }
 .move-button:hover{
   background-color: hsla(187, 100%, 42%, 0.2);
 }
-
 .delete-button{
   background-color: hsla(187, 100%, 42%, 0.4);
-  padding-inline: 1rem;
+  padding: 5px;
+  margin: 0;
 }
 .delete-button:hover{
   background-color: hsla(187, 100%, 42%, 0.2);
+}
+
+.to-do-list h1{
+  margin-block-start: clamp(1rem, 5vw,4rem);
+  margin-block-end: 2rem;
 }
 
 ol{
@@ -312,9 +324,8 @@ ol li{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background-color: hsla(187, 100%, 42%, 0.078);
-  padding-inline-start: 1rem;
-  padding-block-start: 6px;
+  background-color: hsl(211, 29%, 14%);
+  padding: 10px;
   margin-block-end: 10px;
   border-radius: 8px;
 }
@@ -324,20 +335,26 @@ ol li span{
   
 }
 .task-input{
-  margin-block: 2rem;
+  
+  margin-block-end: 2rem;
   display: flex;
   align-items: center;
+  gap: 5px;
   justify-content: space-between;
 }
 .task-input input[type="text"]{ 
-  flex: 1;
   font-size: 1.2rem;
+  width: 80%;
+  margin: 0;
+  
 }
 .task-input button{ 
-  max-width: 220px;
+  width: 20%;
   text-transform: uppercase;
   font-weight: bold;
   background-color: hsla(187, 100%, 42%, 0.4);
+  margin: 0;
+  white-space: nowrap;
 }
 .task-input button:hover{ 
   background-color: hsla(187, 100%, 42%, 0.2);
@@ -345,11 +362,17 @@ ol li span{
 
 
 @media screen and (max-width: 500px) {
+
+  .to-do-list h1{
+    margin-block: 1rem;
+  }
+
    ol li{
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
+      padding: 10px;
    }
    ol li .task-btns{
       align-self: flex-end;
@@ -358,14 +381,19 @@ ol li span{
    .task-input{
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
+      padding-inline-end: 1.2rem;
+      gap: .6rem;
+      margin-block: 1rem;
     }
   
     .task-input input[type="text"]{ 
-      width: 94%;
+      width: 100%;
     }
 
     .task-input button{
-      align-self: flex-end;
+      /* align-self: flex-end; */
+      width: unset;
     }
 
   

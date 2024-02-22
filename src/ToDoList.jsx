@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function ToDoList() {
 
-    const [tasks, setTasks] = useState(['Eat Breakfast', 'Take a shower', 'walk the dog'])
+    const [tasks, setTasks] = useState(['Eat Breakfast'])
     const [newTask, setNewTask] = useState('')
 
     function handleInputChange (e){
@@ -10,16 +10,34 @@ export default function ToDoList() {
     }
 
     function addTask (){
-        newTask ? setTasks(t => [...t, newTask]) : null
+        newTask.trim() ? setTasks(t => [...t, newTask]) : null
         setNewTask('')
     }
 
     function deleteTask (index){
-        setTasks(t => t.filter((_, i) => i !== index))
+        const updatedTasks = tasks.filter((_, i) => i !== index)
+        setTasks(updatedTasks)
     }
 
-    function moveTaskUp (index){}
-    function moveTaskDown (index){}
+    function moveTaskUp (index){
+        if(index > 0) {
+            const updatedTasks = [...tasks];
+            [updatedTasks[index], updatedTasks[index - 1]] = 
+            [updatedTasks[index - 1], updatedTasks[index]]
+            setTasks(updatedTasks)
+        }
+    }
+
+    function moveTaskDown (index){
+         if (index < tasks.length -1) {
+            const updatedTasks = [...tasks]
+            ;[updatedTasks[index], updatedTasks[index + 1]] = [
+                updatedTasks[index + 1],
+                updatedTasks[index],
+            ]
+            setTasks(updatedTasks)
+        }
+    }
 
     return (
         <div className="to-do-list">
