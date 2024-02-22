@@ -170,16 +170,16 @@
 
 
 /* Chrome, Safari, Edge, Opera */
-/* input::-webkit-outer-spin-button,
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-} */
+}
 
 /* Firefox */
-/* input[type=number] {
+input[type=number] {
   -moz-appearance: textfield;
-} */
+}
 
 .form-box{
   display: flex;
@@ -287,3 +287,90 @@ input[type='color']{
   font-size: 1rem;
   font-weight: normal;
 }
+
+
+.move-button{
+  background-color: hsla(187, 100%, 42%, 0.4);
+}
+.move-button:hover{
+  background-color: hsla(187, 100%, 42%, 0.2);
+}
+
+.delete-button{
+  background-color: hsla(187, 100%, 42%, 0.4);
+  padding-inline: 1rem;
+}
+.delete-button:hover{
+  background-color: hsla(187, 100%, 42%, 0.2);
+}
+
+ol{
+  padding: 0;
+  /* margin-block-end: 10px; */
+}
+ol li{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: hsla(187, 100%, 42%, 0.078);
+  padding-inline-start: 1rem;
+  padding-block-start: 6px;
+  margin-block-end: 10px;
+  border-radius: 8px;
+}
+ol li span{
+  font-size: 1.2rem;
+  flex: 1;
+  
+}
+.task-input{
+  margin-block: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task-input input[type="text"]{ 
+  flex: 1;
+  font-size: 1.2rem;
+}
+.task-input button{ 
+  max-width: 220px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: hsla(187, 100%, 42%, 0.4);
+}
+.task-input button:hover{ 
+  background-color: hsla(187, 100%, 42%, 0.2);
+}
+
+
+@media screen and (max-width: 500px) {
+   ol li{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+   }
+   ol li .task-btns{
+      align-self: flex-end;
+   }
+
+   .task-input{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .task-input input[type="text"]{ 
+      width: 94%;
+    }
+
+    .task-input button{
+      align-self: flex-end;
+    }
+
+  
+}
+
+
+
+
