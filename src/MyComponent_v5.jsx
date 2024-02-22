@@ -1,31 +1,29 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
-
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function MyComponent() {
+	// const [cars, setCars] = useState([])
+	const [carYear, setCarYear] = useState(2)
+	// const [carMake, setCarMake] = useState('')
+	// const [modelMake, setModelMake] = useState('')
 
-   const [count, setCount] = useState(0)
-   const [color, setColor] = useState('DodgerBlue')
+	function handleAddCar() {}
 
-   useEffect( ()=>{
-        document.title = `Count: ${count} ${color}`
+	function handleRemoveCar(index) {}
 
-        return ()=>{
-            //Some CLEANUP Code
-        }
-        
-    }, [count, color])
+	function handleYearChange(event) {
+		console.log(event.target.value)
+	}
 
-    return (
-        <>
-		    <p>Count: {count}</p>
-            <button onClick={()=>setCount(c=>c+1)}>+</button>
-            <button onClick={()=>setCount(0)}>Reset</button>
-            <button onClick={()=>setCount(c=>c-1)}>-</button>
+	function handleMakeChange(event) {}
 
-		    <p style={{ color: color }}>Color: {color}</p>
-            <button onClick={()=>setColor(c => c == 'DodgerBlue' ? 'Gold' : 'DodgerBlue')}>Change color</button>
-            
-        </>
+	function handleModelChange(event) {}
+
+	return (
+		<div>
+			<h2>List of Car Objects</h2>
+			{/* <ul></ul> */}
+
+			<input type='number' value={carYear} onChange={handleYearChange} />
+		</div>
 	)
 }

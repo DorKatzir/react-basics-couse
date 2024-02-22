@@ -1,4 +1,4 @@
-import MyComponent from "./MyComponent_v5"
+import MyComponent from "./MyComponent"
 
 function App() {
 

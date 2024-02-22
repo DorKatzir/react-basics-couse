@@ -1,43 +1,38 @@
-
-import { useState } from 'react'
+import { useEffect, useState } from "react"
 
 export default function MyComponent() {
 
-	// const [cars, setCars] = useState([])
-	const [carYear, setCarYear] = useState(2)
-	// const [carMake, setCarMake] = useState('')
-	// const [modelMake, setModelMake] = useState('')
+	const [width, setWidth] = useState(window.innerWidth)
+	const [height, setHeight] = useState(window.innerHeight)
 
-	function handleAddCar(){
+	useEffect(()=>{
+		
+		window.addEventListener('resize', handleResize)
+		console.log('EVENT LISTENER ADDED')
+		
+		return ()=>{
+			window.removeEventListener('resize', handleResize)
+			console.log('EVENT LISTENER REMOVED')
+		}
+	}, [])
 
-	}
+	useEffect(() => {
+
+		window.document.title = `Size: ${width} x ${height}`
+
+	}, [width, height])
 	
-	function handleRemoveCar(index){
-		
-	}
 
-	function handleYearChange(event){
-		console.log(event.target.value)
-	}
 
-	function handleMakeChange(event){
-		
+	function handleResize(){
+		setWidth(window.innerWidth)
+		setHeight(window.innerHeight)
 	}
-
-	function handleModelChange(event){
-		
-	}
-
    
     return (
-		<div>
-			<h2>List of Car Objects</h2>
-			{/* <ul></ul> */}
-			
-				<input type="number" value={carYear} onChange={handleYearChange}/>
-
-
-			
-		</div>
+		<>
+			<p>Window Width: {width}px</p>
+			<p>Window Height: {height}px</p>
+		</>
 	)
 }
