@@ -1,10 +1,11 @@
-import ComponentA from "./ComponentA"
+import DigitalClock from "./DigitalClock"
+
 
 function App() {
 
   return(
     <>
-      <ComponentA/>
+      <DigitalClock/>
     </>
   )
 }
