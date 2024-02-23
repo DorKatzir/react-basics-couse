@@ -1,6 +1,4 @@
-import { useEffect } from "react"
-import { useState } from "react"
-
+import { useEffect, useState } from "react"
 
 export default function DigitalClock() {
 
@@ -20,11 +18,11 @@ export default function DigitalClock() {
         let houres = time.getHours()
         const minutes = time.getMinutes()
         const seconds = time.getSeconds()
-        const meridien = houres >= 12 ? 'PM' : 'AM'
+        // const meridien = houres >= 12 ? 'PM' : 'AM'
 
-        houres = houres % 12 || 12
+        // houres = houres % 12 || 12
 
-        return `${padZero(houres)}:${padZero(minutes)}:${padZero(seconds)} ${meridien}`
+        return `${padZero(houres)}:${padZero(minutes)}:${padZero(seconds)}`
     }
 
     function padZero(number){
