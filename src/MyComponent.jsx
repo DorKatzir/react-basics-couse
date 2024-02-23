@@ -1,38 +1,51 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
+import { useRef } from "react"
+
+
 
 export default function MyComponent() {
 
-	const [width, setWidth] = useState(window.innerWidth)
-	const [height, setHeight] = useState(window.innerHeight)
+	const inputRef1 = useRef(null)
+	const inputRef2 = useRef(null)
+	const inputRef3 = useRef(null)
 
 	useEffect(()=>{
-		
-		window.addEventListener('resize', handleResize)
-		console.log('EVENT LISTENER ADDED')
-		
-		return ()=>{
-			window.removeEventListener('resize', handleResize)
-			console.log('EVENT LISTENER REMOVED')
-		}
-	}, [])
-
-	useEffect(() => {
-
-		window.document.title = `Size: ${width} x ${height}`
-
-	}, [width, height])
-	
+		console.log('COMPONENT RENDERED')
+		// console.log(inputRef)
+	})
 
 
-	function handleResize(){
-		setWidth(window.innerWidth)
-		setHeight(window.innerHeight)
+	function handleClick1(){
+		inputRef1.current.focus()
+		inputRef1.current.style.backgroundColor = '#607D8B'
+		inputRef2.current.style.backgroundColor = ''
+		inputRef3.current.style.backgroundColor = ''
 	}
+	function handleClick2(){
+		inputRef2.current.focus()
+		inputRef2.current.style.backgroundColor = '#607D8B'
+		inputRef1.current.style.backgroundColor = ''
+		inputRef3.current.style.backgroundColor = ''
+		
+	}
+	function handleClick3(){
+		inputRef3.current.focus()
+		inputRef3.current.style.backgroundColor = '#607D8B'
+		inputRef1.current.style.backgroundColor = ''
+		inputRef2.current.style.backgroundColor = ''
+	}
+
    
     return (
 		<>
-			<p>Window Width: {width}px</p>
-			<p>Window Height: {height}px</p>
+			<button onClick={handleClick1}>Click me 1</button>
+			<input ref={inputRef1} />
+			<br />
+			<button onClick={handleClick2}>Click me 2</button>
+			<input ref={inputRef2} />
+			<br />
+			<button onClick={handleClick3}>Click me 3</button>
+			<input ref={inputRef3} />
 		</>
 	)
 }
