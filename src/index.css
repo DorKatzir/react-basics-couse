@@ -471,7 +471,7 @@ ol li span{
 }
 .controls{
   display: flex;
-  /* gap: .5rem; */
+  
 }
 .controls button{
   text-transform: uppercase;
