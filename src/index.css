@@ -464,7 +464,7 @@ ol li span{
 }
 .display{
   font-size: clamp(3rem,5vw,5rem);
-  font-family: monospace;
+  font-family: "Roboto Mono", monospace;
   font-weight: 600;
   text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75%);
   margin-block-end: 25px;
